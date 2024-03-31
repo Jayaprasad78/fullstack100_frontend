@@ -1,12 +1,11 @@
 const express=require('express')
 const app=express()
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:4200'); // Allow requests from this origin
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); // Allow specific headers
-    next();
-  });
+app.use(cors({
+  origin: 'https://fullstack100-frontend.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
   
 
 app.get('/',(req,res)=>{
