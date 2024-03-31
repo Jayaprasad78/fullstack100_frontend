@@ -1,5 +1,6 @@
 const express=require('express')
 const app=express()
+const cors = require('cors');
 
 app.use(cors({
   origin: 'https://fullstack100-frontend.vercel.app',
