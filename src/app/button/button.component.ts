@@ -9,7 +9,7 @@ export class ButtonComponent {
   constructor(private http: HttpClient) {}
 
   sendRequest() {
-    this.http.get('http://localhost:3000/about', { responseType: 'text' }).subscribe(
+    this.http.get('https://fullstack100-frontend-fpt1.vercel.app/about', { responseType: 'text' }).subscribe(
       (response) => {
         console.log(response); // Log the response for debugging
         if (response === 'ok') {
